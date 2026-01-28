@@ -545,6 +545,8 @@ button:hover {
 @media (max-width: 576px){
   #about-content {
     gap: 20px;
+    display: flex;
+    flex-direction: column;
   }
   #about-text {
     text-align: justify;
