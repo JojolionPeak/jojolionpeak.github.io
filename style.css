@@ -193,8 +193,13 @@ header {
   transform: translateY(-5px);
 }
 
-#pro
-
+#home a {
+  background-color: var(--emphasis);
+  color: var(--page);
+  padding: 30px 40px;
+  justify-content: center;
+  border-radius: 8px;
+}
 
 #home #project-btn {
   background-color: var(--background-lighter);
@@ -203,12 +208,9 @@ header {
   align-items: center;
 }
 
-#home a {
-  background-color: var(--emphasis);
-  color: var(--page);
-  padding: 30px 40px;
-  justify-content: center;
-  border-radius: 8px;
+.buttons #project-btn:hover {
+  box-shadow: 0 8px 16px var(--emphasis);
+  transform: translateY(-5px);
 }
 
 /* About */
@@ -502,19 +504,21 @@ button:hover {
     justify-content: left;
     align-items: left;
   }
+
+  #contact-info {
+    background-color: var(--gray);
+    padding: 15px;
+  }
+
+  #contact-info a {
+    background-color: var(--emphasis);
+  }
+
   #form-message {
     padding: 10px;
   }
 
   form label {
     text-align: left;
-  }
-}
-
-@media (min-width:992px) {
-  #skills {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }
