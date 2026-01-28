@@ -90,8 +90,27 @@ header {
 
 #Logo {
   font-size: 1.5rem;
+  border-radius: 40px;
+  padding: 10px;
   color: var(--emphasis);
+  animation: pulse-and-glow 3s infinite;
 }
+
+@keyframes pulse-and-glow{
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 20px var(--emphasis);
+  }
+  50% {
+    transform: scale(1.3);
+    box-shadow: 0 0 5px var(--emphasis);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px var(--emphasis);
+  }
+}
+
 
 #nav {
   display: flex;
@@ -129,7 +148,7 @@ header {
   text-align: center;
   padding: 50px 20px;
   opacity: 0;
-  animation: fadeIn 2s ease-in forwards;
+  animation: fadeIn 1.5s ease-in forwards;
 }
 
 #home h1 {
@@ -141,7 +160,7 @@ header {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateX(-50px);
   }
   to {
     opacity: 1;
@@ -193,8 +212,13 @@ header {
   transform: translateY(-5px);
 }
 
-#pro
-
+#home a {
+  background-color: var(--emphasis);
+  color: var(--page);
+  padding: 30px 40px;
+  justify-content: center;
+  border-radius: 8px;
+}
 
 #home #project-btn {
   background-color: var(--background-lighter);
@@ -203,12 +227,9 @@ header {
   align-items: center;
 }
 
-#home a {
-  background-color: var(--emphasis);
-  color: var(--page);
-  padding: 30px 40px;
-  justify-content: center;
-  border-radius: 8px;
+.buttons #project-btn:hover {
+  box-shadow: 0 8px 16px var(--emphasis);
+  transform: translateY(-5px);
 }
 
 /* About */
@@ -502,19 +523,21 @@ button:hover {
     justify-content: left;
     align-items: left;
   }
+
+  #contact-info {
+    background-color: var(--gray);
+    padding: 15px;
+  }
+
+  #contact-info a {
+    background-color: var(--emphasis);
+  }
+
   #form-message {
     padding: 10px;
   }
 
   form label {
     text-align: left;
-  }
-}
-
-@media (min-width:992px) {
-  #skills {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }
