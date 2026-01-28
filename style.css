@@ -541,3 +541,12 @@ button:hover {
     text-align: left;
   }
 }
+
+@media (max-width: 576px){
+  #about-content {
+    gap: 20px;
+  }
+  #about-text {
+    text-align: justify;
+  }
+}
