@@ -1,160 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Jonathan Bernal | Software Engineer</title>
-</head>
-<body>
-  <header>
-    <p id="Logo" aria-label="JoJo — site logo">JoJo</p>
-    <nav id="nav" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonathan Bernal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="star-field" aria-hidden="true"></div>
+
+    <div id="light-scene" aria-hidden="true">
+      <div class="scene-glow"></div>
+      <div class="scene-skyline"></div>
+      <div class="scene-water">
+        <div class="scene-shimmer"></div>
+        <div class="scene-wave scene-wave--1"></div>
+        <div class="scene-wave scene-wave--2"></div>
+        <div class="scene-wave scene-wave--3"></div>
+      </div>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <p class="logo" aria-hidden="true">JoJo</p>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-  </header>
-  <main>
+
+    <button id="theme-toggle" aria-label="Switch to dark mode">☾</button>
+
+    <main id="main-content">
+
     <section id="home" aria-labelledby="home-heading">
-      <h3>Full Time Creative Mind</h3>
       <h1 id="home-heading">Jonathan Bernal</h1>
-      <section aria-label="Introduction">
-        <div id="home-flex">
-          <p id="tagline">Full Stack Dev &amp; Creator</p>
-          <p id="intro">I've always wanted to create and bring new ideas to the world, and when I started coding, I realized I could achieve my goal. I express my creativity through the projects that I undertake and the limits that I push. I'm currently growing my talents at the Marcy Lab School.</p>
-        </div>
-        <div class="buttons">
-          <a id="project-btn" href="#projects">View My Projects</a>
-          <a href="#contact">Get In Touch</a>
-        </div>
-      </section>
+      <p class="subtitle">Full Stack Dev &amp; Software Engineer</p>
+      <p class="blurb">
+        I've always wanted to create and bring new ideas to the world, and when I started coding, I
+        realized I could achieve my goal. I express my creativity through the projects that I undertake
+        and the limits that I push. I'm currently growing my talents at the Marcy Lab School.
+      </p>
     </section>
 
     <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">Get To Know Me</h2>
-      <div id="about-content">
-        <div id="about-text">
-          <p>I'm a software engineering fellow that is focused on making websites that are not only reliable, but accessible to all people. I grew up surrounded by older family members and family friends who struggled to navigate fancy websites that weren't tailored to them. Now, I work to make webpages that are not only visually appealing, but also approachable by people of all skill levels; whether they're used to technology, or not. Outside of coding, I'm a huge fan of One Piece, gaming, and fitness!</p>
-        </div>
-        <div id="about-skills">
-          <h3>Technical Skills</h3>
-          <ul id="skills" aria-label="List of technical skills">
-            <li>JavaScript</li>
-            <li>HTML5</li>
-            <li>CSS</li>
-            <li>TailwindCSS</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>PostgreSQL</li>
-            <li>Vite</li>
-            <li>Git</li>
-            <li>Claude AI</li>
-          </ul>
+      <div class="about-left">
+        <h2 id="about-heading">Get To Know Me</h2>
+        <p>
+          I'm a software engineering fellow that is focused on making websites that are not only reliable,
+          but accessible to all people. I grew up surrounded by older family members and family friends who
+          struggled to navigate fancy websites that weren't tailored to them. Now, I work to make webpages
+          that are not only visually appealing, but also approachable by people of all skill levels;
+          whether they're used to technology, or not. Outside of coding, I'm a huge fan of One Piece,
+          gaming, and fitness!
+        </p>
+      </div>
+      <div class="about-right">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">TailwindCSS</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Vite</span>
+          <span class="skill-tag">Git</span>
         </div>
       </div>
     </section>
 
     <section id="projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Projects</h2>
-      <ul id="projects-grid" aria-label="Project portfolio">
+      <div class="projects-container">
 
-        <li id="project-card">
-          <div id="project-img" role="img" aria-label="CLI Project placeholder"><span>CLI Project</span></div>
-          <div id="project-info">
+        <div class="project-card">
+          <div class="project-img-placeholder" role="img" aria-label="CLI Project placeholder"><span>CLI Project</span></div>
+          <div class="project-card-body">
             <h3>CLI Quiz Game</h3>
             <p>A small quiz game that runs in your computer's command line interface.</p>
-            <ul id="project-tags" aria-label="Technologies used">
-              <li>JavaScript</li>
-              <li>Node.js</li>
-            </ul>
+            <div class="skills-used">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Node.js</span>
+            </div>
             <div class="project-links">
-              <a href="#" aria-label="Live Site for CLI Quiz Game (not available)">Live Site (N/A)</a>
-              <a href="https://github.com/JojolionPeak/quiz-game" aria-label="GitHub for CLI Quiz Game">Github</a>
+              <span class="project-link-na" aria-label="Live site not available for CLI Quiz Game">Live Site (N/A)</span>
+              <a href="https://github.com/JojolionPeak/quiz-game" target="_blank" rel="noopener noreferrer" aria-label="GitHub for CLI Quiz Game">GitHub</a>
             </div>
           </div>
-        </li>
+        </div>
 
-        <li id="project-card">
-          <img class="project-img-real" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLPxYQtYycMCXjTVEtQStl5XN2ITIFBuiXYw&s" alt="Shadow Realm Yu-Gi-Oh Card Generator preview">
-          <div id="project-info">
+        <div class="project-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLPxYQtYycMCXjTVEtQStl5XN2ITIFBuiXYw&s" alt="Shadow Realm Yu-Gi-Oh Card Generator preview" />
+          <div class="project-card-body">
             <h3>Yu-Gi-Oh Card Generator</h3>
             <p>A web app that displays random Yu-Gi-Oh! cards in a dynamic and visually immersive way.</p>
-            <ul id="project-tags" aria-label="Technologies used">
-              <li>JavaScript</li>
-              <li>Node.js</li>
-              <li>Vite</li>
-              <li>HTML</li>
-              <li>CSS</li>
-            </ul>
+            <div class="skills-used">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Vite</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+            </div>
             <div class="project-links">
-              <a href="https://jose-jojo-mls.github.io/ShadowRealm/" aria-label="Live site for Shadow Realm Yu-Gi-Oh Card Generator" target="_blank" rel="noopener noreferrer">Live Site</a>
-              <a href="https://github.com/jose-jojo-mls/ShadowRealm" aria-label="GitHub repository for Shadow Realm" target="_blank" rel="noopener noreferrer">Github</a>
+              <a href="https://jose-jojo-mls.github.io/ShadowRealm/" target="_blank" rel="noopener noreferrer" aria-label="Live site for Shadow Realm Yu-Gi-Oh Card Generator">Live Site</a>
+              <a href="https://github.com/jose-jojo-mls/ShadowRealm" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Shadow Realm">GitHub</a>
             </div>
           </div>
-        </li>
+        </div>
 
-        <li id="project-card">
-          <img class="project-img-real" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCz7YvEwF0ZF9FQnfknZBRWPDe8idMWiGWag&s" alt="Mementos finance tracker preview">
-          <div id="project-info">
+        <div class="project-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCz7YvEwF0ZF9FQnfknZBRWPDe8idMWiGWag&s" alt="Mementos finance tracker preview" />
+          <div class="project-card-body">
             <h3>Mementos</h3>
             <p>A clean, self-hosted web app that lets you manually track your accounts and transactions, visualize your spending, and understand where your money actually goes.</p>
-            <ul id="project-tags" aria-label="Technologies used">
-              <li>JavaScript</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>PostgreSQL</li>
-              <li>React</li>
-              <li>Vite</li>
-              <li>HTML</li>
-              <li>TailwindCSS</li>
-            </ul>
+            <div class="skills-used">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Vite</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">TailwindCSS</span>
+            </div>
             <div class="project-links">
-              <a href="https://mementos-u3hu.onrender.com/" aria-label="Live site for Mementos finance tracker" target="_blank" rel="noopener noreferrer">Live Site</a>
-              <a href="https://github.com/The-Marcy-Lab-School-Assignments/full-stack-project-remix-JojolionPeak" aria-label="GitHub repository for Mementos" target="_blank" rel="noopener noreferrer">Github</a>
+              <a href="https://mementos-u3hu.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Live site for Mementos finance tracker">Live Site</a>
+              <a href="https://github.com/The-Marcy-Lab-School-Assignments/full-stack-project-remix-JojolionPeak" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Mementos">GitHub</a>
             </div>
           </div>
-        </li>
-        <!-- More project coming soon! -->
-      </ul>
+        </div>
+
+      </div>
     </section>
 
     <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">How To Find Me</h2>
-      <div id="contact-content">
+      <h2 id="contact-heading">Contact</h2>
+      <div class="contact-container">
+
         <form action="https://formspree.io/f/mvzaldjg" method="POST" aria-label="Contact form">
-          <div id="name-email">
-            <div id="form-name">
-              <label for="name">Name</label>
-              <input type="text" placeholder="Your Name Here" id="name" name="name" required autocomplete="name">
-            </div>
-            <div id="form-email">
-              <label for="email">Email</label>
-              <input type="email" placeholder="Your Email Here" id="email" name="email" required autocomplete="email">
-            </div>
-          </div>
-          <div id="form-message">
-            <label for="message">Leave A Message</label>
-            <textarea id="message" name="message" rows="3" placeholder="Your Message Here" required></textarea>
-          </div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
           <button type="submit">Send Message</button>
         </form>
-        <div id="contact-info" aria-label="Social media links">
+
+        <div class="find-me-online">
           <h3>Find Me Online</h3>
-          <span class="contact-arrow" aria-hidden="true">-></span>
-          <ul>
-            <li><a href="mailto:johnanber@gmail.com" aria-label="Send email to Jonathan Bernal">Email</a></li>
-            <li><a href="https://github.com/JojolionPeak" aria-label="Jonathan's GitHub profile" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jonathan-bernal-3425b93aa/" aria-label="Jonathan's LinkedIn profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          </ul>
+          <a href="https://github.com/JojolionPeak" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/jonathan-bernal04" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:Johnanber@gmail.com">Email Me</a>
         </div>
+
       </div>
     </section>
-  </main>
-  <footer>
-    <p>Designed &amp; Built by Jonathan Bernal &copy; 2026</p>
-  </footer>
-</body>
+
+    </main>
+
+  <script>
+    (function () {
+      const field = document.getElementById('star-field');
+      const count = 180;
+      const frag = document.createDocumentFragment();
+      for (let i = 0; i < count; i++) {
+        const star = document.createElement('div');
+        const size = Math.random() * 2 + 0.5;
+        const isPulser = Math.random() < 0.15;
+        star.className = 'star' + (isPulser ? ' star--pulse' : '');
+        star.style.cssText = [
+          'width:'  + size + 'px',
+          'height:' + size + 'px',
+          'top:'    + (Math.random() * 100) + 'vh',
+          'left:'   + (Math.random() * 100) + 'vw',
+          '--duration:' + (2 + Math.random() * 4) + 's',
+          '--delay:'    + (-(Math.random() * 6)) + 's',
+          '--max-opacity:' + (0.4 + Math.random() * 0.55),
+        ].join(';');
+        frag.appendChild(star);
+      }
+      field.appendChild(frag);
+    })();
+  </script>
+  <script src="dev.js"></script>
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        html.setAttribute('data-theme', 'dark');
+        toggle.textContent = '☀';
+        toggle.setAttribute('aria-label', 'Switch to light mode');
+      } else {
+        html.removeAttribute('data-theme');
+        toggle.textContent = '☾';
+        toggle.setAttribute('aria-label', 'Switch to dark mode');
+      }
+    }
+
+    applyTheme(localStorage.getItem('theme') || 'light');
+
+    toggle.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  </script>
+  </body>
 </html>
